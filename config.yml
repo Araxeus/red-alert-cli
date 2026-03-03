@@ -1,0 +1,54 @@
+# Set to true if your terminal supports RTL text.
+# If false, Hebrew/Arabic will be reversed but wont be copy-pastable.
+terminal_support_rtl: false
+
+# Specific locations (starts with) to filter by.
+# can be in Hebrew/English/Russian/Arabic
+locations:
+  - 'חיפה - כרמל'
+  - 'ירושלים - דרום'
+  - 'תל אביב'
+  - 'חיפה'
+  - 'ירושלים'
+  - 'מודיעין'
+  - 'באר שבע'
+
+# General areas (starts with) to filter by.
+# can be in Hebrew/English/Russian/Arabic
+areas:
+  # - 'בית שמש'
+  # - 'דן'
+  # - 'השפלה'
+  # - 'ירקון'
+  # - 'ירושלים'
+  # - 'חיפה'
+  # - 'באר שבע'
+
+# Should not touch this, unless you know what you are doing.
+websites:
+  unifiedCities: 'https://www.tzevaadom.co.il/static/cities.json'
+  cities:
+    hebrew: 'https://alerts-history.oref.org.il/Shared/Ajax/GetDistricts.aspx?lang=he'
+    english: 'https://alerts-history.oref.org.il/Shared/Ajax/GetDistricts.aspx?lang=en'
+    russian: 'https://alerts-history.oref.org.il/Shared/Ajax/GetDistricts.aspx?lang=ru'
+    arabic: 'https://alerts-history.oref.org.il/Shared/Ajax/GetDistricts.aspx?lang=ar'
+  citiesWeb:
+    hebrew: 'https://alerts-history.oref.org.il/Shared/Ajax/GetCitiesMix.aspx?lang=he'
+    english: 'https://alerts-history.oref.org.il/Shared/Ajax/GetCitiesMix.aspx?lang=en'
+    russian: 'https://alerts-history.oref.org.il/Shared/Ajax/GetCitiesMix.aspx?lang=ru'
+    arabic: 'https://alerts-history.oref.org.il/Shared/Ajax/GetCitiesMix.aspx?lang=ar'
+  citiesNotes:
+    hebrew: 'https://alerts-history.oref.org.il/Shared/Ajax/GetAlarmInstructions.aspx?lang=he&from=1&cityid='
+    english: 'https://alerts-history.oref.org.il/Shared/Ajax/GetAlarmInstructions.aspx?lang=en&from=1&cityid='
+    russian: 'https://alerts-history.oref.org.il/Shared/Ajax/GetAlarmInstructions.aspx?lang=ru&from=1&cityid='
+    arabic: 'https://alerts-history.oref.org.il/Shared/Ajax/GetAlarmInstructions.aspx?lang=ar&from=1&cityid='
+  districts:
+    hebrew: 'https://www.oref.org.il/districts/cities_heb.json'
+    english: 'https://www.oref.org.il/districts/cities_eng.json'
+    russian: 'https://www.oref.org.il/districts/cities_rus.json'
+    arabic: 'https://www.oref.org.il/districts/cities_arb.json'
+  segments:
+    hebrew: 'https://dist-android.meser-hadash.org.il/smart-dist/services/anonymous/segments/android?locale=iw_IL&instance=1544803905'
+    english: 'https://dist-android.meser-hadash.org.il/smart-dist/services/anonymous/segments/android?locale=en_US&instance=1544803905'
+    russian: 'https://dist-android.meser-hadash.org.il/smart-dist/services/anonymous/segments/android?locale=ru_RU&instance=1544803905'
+    arabic: 'https://dist-android.meser-hadash.org.il/smart-dist/services/anonymous/segments/android?locale=ar_EG&instance=1544803905'
