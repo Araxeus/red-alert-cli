@@ -144,9 +144,8 @@ const EARLY_WARNING_KEYWORDS = [
 
 const EXIT_NOTIFICATION_TITLE = 'עדכון פיקוד העורף';
 const EXIT_NOTIFICATION_KEYWORDS = [
+    'הסתיים',
     'סיום אירוע',
-    'האירוע הסתיים',
-    'הסתיים באזורים',
 ];
 
 type SystemMessageKind = 'early-warning' | 'exit-notification' | null;
