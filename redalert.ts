@@ -142,11 +142,8 @@ const EARLY_WARNING_KEYWORDS = [
     'בעקבות זיהוי שיגורים',
 ];
 
-const EXIT_NOTIFICATION_TITLE = 'עדכון פיקוד העורף';
-const EXIT_NOTIFICATION_KEYWORDS = [
-    'הסתיים',
-    'סיום אירוע',
-];
+const EXIT_NOTIFICATION_TITLES = ['עדכון פיקוד העורף', EARLY_WARNING_TITLE];
+const EXIT_NOTIFICATION_KEYWORDS = ['הסתיים', 'סיום אירוע'];
 
 type SystemMessageKind = 'early-warning' | 'exit-notification' | null;
 
@@ -178,7 +175,7 @@ function classifySystemMessage(msg: {
     }
 
     if (
-        title.includes(EXIT_NOTIFICATION_TITLE) &&
+        EXIT_NOTIFICATION_TITLES.some(t => title.includes(t)) &&
         EXIT_NOTIFICATION_KEYWORDS.some(kw => body.includes(kw))
     ) {
         return 'exit-notification';
