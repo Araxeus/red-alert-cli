@@ -7,8 +7,9 @@ import config_ from './config.yml';
 type Language = 'english' | 'hebrew' | 'russian' | 'arabic';
 const languagesShort = ['he', 'en', 'ru', 'ar'] as const;
 
-const config = config_ as {
+export const config = config_ as {
     terminal_support_rtl?: boolean;
+    silent?: boolean;
     areas?: string[];
     locations?: string[];
     websites: {

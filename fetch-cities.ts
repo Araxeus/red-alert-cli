@@ -1,20 +1,5 @@
 import { writeFile } from 'node:fs/promises';
-import config_ from './config.yml';
-
-type Language = 'english' | 'hebrew' | 'russian' | 'arabic';
-const config = config_ as {
-    terminal_support_rtl?: boolean;
-    regions?: string[];
-    locations?: string[];
-    websites: {
-        unifiedCities: string;
-        cities: Record<Language, string>;
-        citiesWeb: Record<Language, string>;
-        citiesNotes: Record<Language, string>;
-        districts: Record<Language, string>;
-        segments: Record<Language, string>;
-    };
-};
+import { config } from './redalert.ts';
 
 const unified = (await fetch(config.websites?.unifiedCities).then(res =>
     res.json(),
