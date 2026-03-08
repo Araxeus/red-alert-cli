@@ -54,7 +54,11 @@ async function alertToast(alert: string) {
     await new Toast({
         title,
         aumid: 'oref alert',
-        audio: 'ms-winsoundevent:Notification.Looping.Alarm10',
+        audio:
+            config.silent === true
+                ? undefined
+                : 'ms-winsoundevent:Notification.Looping.Alarm10',
+        silent: config.silent === true,
         loopAudio: true,
         longTime: true,
         scenario: 'urgent',

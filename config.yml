@@ -2,6 +2,8 @@
 # If false, Hebrew/Arabic will be reversed but wont be copy-pastable.
 terminal_support_rtl: false
 
+silent: false
+
 # Specific locations (starts with) to filter by.
 # can be in Hebrew/English/Russian/Arabic
 locations:
