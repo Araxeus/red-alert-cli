@@ -1,5 +1,5 @@
 import { writeFile } from 'node:fs/promises';
-import { config } from './redalert.ts';
+import { config } from 'src/utils'
 
 const unified = (await fetch(config.websites?.unifiedCities).then(res =>
     res.json(),
