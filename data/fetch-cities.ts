@@ -1,5 +1,5 @@
 import { writeFile } from 'node:fs/promises';
-import { config } from 'src/utils'
+import { config } from 'src/utils';
 
 const unified = (await fetch(config.websites?.unifiedCities).then(res =>
     res.json(),
@@ -49,6 +49,6 @@ for (const city of cities) {
     delete city.lng;
 }
 
-await writeFile('cities.json', JSON.stringify(cities));
+await writeFile(`${import.meta.dir}/cities.json`, JSON.stringify(cities));
 
 console.log(`${cities.length} cities loaded and saved to cities.json`);
